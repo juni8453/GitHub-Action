@@ -9,5 +9,5 @@ COPY ${JAR_FILE} app.jar
 #ENTRYPOINT ["java","-Dspring.profiles.active=${USE_PROFILE}","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 
 #yml 분리 테스트 2
-ENV USE_PROFILE deploy
-ENTRYPOINT ["java", "-Dspring.profiles.active=${USE_PROFILE}", "-jar","/app.jar"]
+ENV profiles=deploy
+ENTRYPOINT ["java", "-Dspring.profiles.active=${profiles}", "-jar","/app.jar"]
