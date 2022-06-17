@@ -45,5 +45,5 @@ jobs:
             sudo docker ps -a -q --filter "name=github-action-test" | grep -q . && docker stop github-action-test && docker rm github-action-test | true
             sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/github-action-test:1.0
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/github-action-test:1.0
-            sudo docker run -d -p 80:8080 --name github-action-test ${{ secrets.DOCKER_USERNAME }}/github-action-test:1.0
+            sudo docker run -d -p 80:8080 --restart always -e PROFILES=deploy --name github-action-test ${{ secrets.DOCKER_USERNAME }}/github-action-test:1.0
             sudo docker rmi -f $(docker images -f "dangling=true" -q) || true
