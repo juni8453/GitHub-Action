@@ -1,0 +1,13 @@
+# 배포용 yml 파일
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    # MySQL 이 있는 EC2 인스턴스 퍼블릭 주소
+    url: jdbc:mysql://13.209.67.148:3306/test
+    username: tany
+    password: Wjsqudwns1!
+
+  jpa:
+    hibernate:
+      ddl-auto: validation
