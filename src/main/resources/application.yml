@@ -1,6 +1,9 @@
 # dev, deploy 공통 설정 yml 파일
+#spring:
+#  config:
+#    activate:
+#      on-profile:
+#        - ${profiles}
 spring:
-  config:
-    activate:
-      on-profile:
-        - ${profiles}
+  profiles:
+    active: ${profiles}
