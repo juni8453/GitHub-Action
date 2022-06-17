@@ -1,8 +1,5 @@
 FROM openjdk:11-jdk
 VOLUME /tmp
 ARG JAR_FILE=./build/libs/*.jar
-ARG SPRING_PROFILES_ACTIVE
-RUN echo $SPRING_PROFILES_ACTIVE
-ENV SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=deploy","-jar","/app.jar"]
