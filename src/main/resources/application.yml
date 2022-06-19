@@ -4,6 +4,3 @@ spring:
     activate:
       on-profile:
         - ${profiles}
-#spring:
-#  profiles:
-#    active: ${profiles}
