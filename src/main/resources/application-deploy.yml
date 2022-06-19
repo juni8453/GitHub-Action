@@ -2,11 +2,14 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DATASOURCE_URL}:3306/test
+    username: ${DATASOURCE_NAME}
+    password: ${DATASOURCE_PASSWORD}
 
     # MySQL 이 있는 EC2 인스턴스 퍼블릭 주소
-    url: jdbc:mysql://13.209.67.148:3306/test
-    username: tany
-    password: Wjsqudwns1!
+#    url: jdbc:mysql://13.209.67.148:3306/test
+#    username: tany
+#    password: Wjsqudwns1!
 
   jpa:
     hibernate:
