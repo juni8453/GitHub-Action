@@ -9,3 +9,4 @@
 
 - DATASOURCE_URL, DATASOURCE_NAME, DATASOURCE_PASSWORD 환경변수 셋팅 테스트
 - 잘 안되고 있는 중 ..
+- Actions secrets 가 잘못돼있는 것 같아서 수정
